@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Study Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📚 Student Study Planner</h1>
+      <p>Keep track of your study tasks, assignments, and courses easily.</p>
+    </header>
+
+    <main>
+      <!-- Task Input Form -->
+      <form id="task-form" class="task-form">
+        <div class="form-group">
+          <label for="task-title">Task Title *</label>
+          <input type="text" id="task-title" placeholder="e.g., Complete Chapter 3 Revision" required>
+        </div>
+        <div class="form-group">
+          <label for="task-subject">Subject / Course</label>
+          <input type="text" id="task-subject" placeholder="e.g., C++ Programming">
+        </div>
+        <button type="submit" id="add-btn">Add Study Task</button>
+      </form>
+
+      <!-- Error / Validation Alert -->
+      <div id="validation-msg" class="validation-msg" style="display: none;"></div>
+
+      <!-- Task List Area -->
+      <section class="task-section">
+        <h2>Your Study Tasks</h2>
+        <div id="empty-state" class="empty-state">
+          📝 No study tasks added yet. Add a task above to get started!
+        </div>
+        <ul id="task-list" class="task-list"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
